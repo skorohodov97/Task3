@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Котики и миска</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Котики и миска</h1>
+        <label for="n">Количество котиков (n):</label>
+        <input type="number" id="n" min="1" required>
+        
+        <label for="b">Корма на одного котика (b):</label>
+        <input type="number" id="b" min="1" required>
+        
+        <label for="m">Вместимость миски (m):</label>
+        <input type="number" id="m" min="1" required>
+        <div id="m-error" class="error">b не может быть больше m</div>
+        
+        <label for="t">Время кормления одного котика (t) в секундах:</label>
+        <input type="number" id="t" min="1" required>
+        
+        <label for="r">Время пополнения миски (r) в секундах:</label>
+        <input type="number" id="r" min="1" required>
+    
+        <div class="checkbox-container">
+          <input type="checkbox" id="fast-result">
+          <label for="fast-result">Быстрый результат</label>
+        </div>
+        
+        <button onclick="startSimulation()">Запустить</button>
+        
+        <div id="status"></div>
+      </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
